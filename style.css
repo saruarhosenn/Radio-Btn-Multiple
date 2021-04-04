@@ -1,0 +1,104 @@
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.wrapper {
+	padding: 0 25px;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+/*==========================*/
+/*----- REDIO BUTTON 1 -----*/
+/*==========================*/
+.main__redio {
+	margin: 15px;
+	display: inline-block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.main__redio input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #ccc;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.main__redio:hover input ~ .checkmark {
+	background-color: #9B9B9B;
+}
+
+/* When the radio button is checked, add a blue background */
+.main__redio input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark::after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.main__redio input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.main__redio .checkmark::after {
+	top: 8.5px;
+	left: 8.5px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*==========================*/
+/*----- REDIO BUTTON 2 -----*/
+/*==========================*/
