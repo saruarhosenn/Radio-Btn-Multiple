@@ -1,4 +1,3 @@
-
 *,
 *::after,
 *::before {
@@ -35,7 +34,7 @@ h1 {
 /*==========================*/
 /*----- REDIO BUTTON 1 -----*/
 /*==========================*/
-.main__redio {
+.main__radio {
 	margin: 15px;
 	display: inline-block;
 	position: relative;
@@ -50,7 +49,7 @@ h1 {
 }
 
 /* Hide the browser's default radio button */
-.main__redio input {
+.main__radio input {
 	position: absolute;
 	opacity: 0;
 	cursor: pointer;
@@ -68,12 +67,12 @@ h1 {
 }
 
 /* On mouse-over, add a grey background color */
-.main__redio:hover input ~ .checkmark {
+.main__radio:hover input ~ .checkmark {
 	background-color: #9B9B9B;
 }
 
 /* When the radio button is checked, add a blue background */
-.main__redio input:checked ~ .checkmark {
+.main__radio input:checked ~ .checkmark {
 	background-color: #2196F3;
 }
 
@@ -85,12 +84,12 @@ h1 {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.main__redio input:checked ~ .checkmark:after {
+.main__radio input:checked ~ .checkmark:after {
 	display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.main__redio .checkmark::after {
+.main__radio .checkmark::after {
 	top: 8.5px;
 	left: 8.5px;
 	width: 8px;
@@ -102,3 +101,49 @@ h1 {
 /*==========================*/
 /*----- REDIO BUTTON 2 -----*/
 /*==========================*/
+.radio__btn__item {
+	margin-right: 20px;
+}
+.radio__btn {
+	display: none;
+}
+
+.radio__btn__title {
+	position: relative;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 18px;
+/*	margin-right: 20px;*/
+}
+
+.radio__btn__title::before {
+    content: "";
+    border: 2px solid #222;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: -6px 12px;
+    margin-left: 0;
+    border-radius: 50%;
+}
+
+.radio__btn__title::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: rgba(34, 34, 34, 0);
+	left: 5px;
+	top: 10px;
+	margin: -8px 20px;
+	margin-left: 0;
+	border-radius: 50%;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.radio__btn:checked + .radio__btn__title::after {
+	background: rgba(34, 34, 34, 1);
+}
